@@ -1,0 +1,27 @@
+<div class="container">
+  <div nz-row>
+    <div nz-col nzSpan="12">
+      <h1 class="text-white">NTV QUICK LINKS</h1>
+      <h4 class="text-light">Ntv National</h4>
+      <h4 class="text-light">Ntv Plus</h4>
+      <h4 class="text-light">Ntv Gold</h4>
+      <h4 class="text-light">Ntv Kohalpur</h4>
+      <h4 class="text-light">Ntv News</h4>
+
+    </div>
+    <div nz-col nzSpan="12">
+      <div class="logo text-center">
+        <img src="assets/img/logo.png" alt="">
+        <h4 class="text-light">
+          NTV Maitighar, Kathmandu Nepal
+        </h4>
+        <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'">
+            <li nz-menu-item routerLink="/" *ngFor="let social of socials">
+              <i nz-icon type="{{social}}" theme="fill" class="social-f"></i>
+            </li>
+          </ul>
+          
+      </div>
+    </div>
+  </div>
+</div>

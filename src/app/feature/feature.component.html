@@ -1,0 +1,18 @@
+<nz-carousel>
+  <div nz-carousel-content *ngFor="let post of posts">
+    <figure style="position: relative;">
+    <img src="{{post.image}}" alt="" style="position:relative">
+
+        <div class="content-area">
+            <h3>{{post.title}}</h3>
+            <h6 class="small-title">
+              {{post.description}}
+            </h6>
+            <div class="more">
+              <button nz-button [nzSize]="size" nzType="default">
+                <i nz-icon type="play-circle" theme="fill"></i>Watch Now</button>
+            </div>
+          </div>
+    </figure>
+  </div>
+</nz-carousel>

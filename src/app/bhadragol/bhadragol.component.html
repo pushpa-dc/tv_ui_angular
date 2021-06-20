@@ -1,0 +1,26 @@
+<div class="popular-wrap mb-2 mt-5">
+  <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+    <div nz-col nzSpan="12">
+      <div class="cat-title">{{title1}}</div>
+      <div *ngFor="let post of posts; let i= index;">
+        <div *ngIf="i==0; else small;">
+          <app-item-medium [post]="post"></app-item-medium>
+        </div>
+        <ng-template #small>
+          <app-item-small [post]="post"></app-item-small>
+        </ng-template>
+      </div>
+    </div>
+    <div nz-col nzSpan="12">
+      <div class="cat-title">{{title1}}</div>
+      <div *ngFor="let post of posts; let i= index;">
+        <div *ngIf="i==0; else small;">
+          <app-item-medium [post]="post"></app-item-medium>
+        </div>
+        <ng-template #small>
+          <app-item-small [post]="post"></app-item-small>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

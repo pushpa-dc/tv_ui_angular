@@ -1,0 +1,27 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo text-center">
+      <img src="assets/img/logo.png" alt="">
+    </div>
+    <nz-affix nzOffsetTop="0" class="text-center">
+      <app-nav></app-nav>
+    </nz-affix>
+  </nz-header>
+  <nz-layout>
+    <nz-layout>
+      <nz-content style="background:#ffff;">
+        <app-feature></app-feature>
+        <div class="container">
+          <app-schedule></app-schedule>
+          <app-popular></app-popular>
+          <app-bhadragol></app-bhadragol>
+          <app-latest></app-latest>
+        </div>
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
+<nz-footer style="background:#001529">
+  <app-footer></app-footer>
+</nz-footer>

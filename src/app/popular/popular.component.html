@@ -1,0 +1,19 @@
+<div class="popular-wrap mb-2">
+  <div class="cat-title">
+    <span class="deco">
+      {{title}}
+    </span>
+  </div>
+
+  <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }">
+    <div nz-col nzSpan="8" *ngFor="let post of posts">
+      <nz-card nzHoverable style="width:100%;" [nzCover]="coverTemplate">
+        <nz-card-meta nzTitle="{{post.title}}" nzDescription="{{curDate | date:'yyyy-MM-dd'}}"></nz-card-meta>
+      </nz-card>
+      <ng-template #coverTemplate>
+        <img alt="example" src={{post.image}} style="height:195px;">
+        <span class="info">{{post.cat | uppercase}}</span>
+      </ng-template>
+    </div>
+  </div>
+</div>

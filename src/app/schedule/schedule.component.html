@@ -1,0 +1,23 @@
+<div class="popular-wrap mb-2">
+  <div class="cat-title">{{title}}</div>
+  <nz-carousel nzAutoplay>
+    <div nz-carousel-content class="d-flex">
+      <div *ngFor="let time of times">
+        <div class="my-card">
+          {{time}}
+        </div>
+      </div>
+    </div>
+  </nz-carousel>
+  <nz-carousel nzAutoplay>
+    <div nz-carousel-content class="d-flex">
+      <div class="card-desc" *ngFor="let title of titles">
+        <div class="color-over">
+          <span class="sch-title">{{title}}</span>
+          <br>
+          <span class="sch-title" style="color:#ddd">8:40</span>
+        </div>
+      </div>
+    </div>
+  </nz-carousel>
+</div>

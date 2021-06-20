@@ -1,0 +1,31 @@
+<ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="background:#521262;text-transform: uppercase;">
+  <li nz-menu-item routerLink="/" style="background:#fd0909;color:#fff">Home</li>
+  <li nz-menu-item routerLink="/">TV Guide</li>
+  <li nz-menu-item routerLink="/">Programs</li>
+  <li nz-menu-item routerLink="/">Notice & Form</li>
+  <li nz-menu-item routerLink="/">Programs</li>
+  <li nz-menu-item routerLink="/"><i nz-icon type="play-circle" theme="outline"></i>Live Now</li>
+  <li nz-menu-item routerLink="/">Organization</li>
+
+  <li nz-submenu>
+    <span title>Channels</span>
+    <ul>
+      <li nz-menu-group>
+        <ul>
+          <li nz-menu-item *ngFor="let channel of channels">{{channel | uppercase}}</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li nz-menu-item (click)="showModalMiddle()"><i nz-icon type="search"></i>
+    <nz-modal nzWrapClassName="vertical-center-modal" [(nzVisible)]="isVisibleMiddle" nzTitle="Search"
+      (nzOnCancel)="handleCancelMiddle()" (nzOnOk)="handleOkMiddle()">
+      <nz-input-group nzSearch [nzSuffix]="suffixIconButton">
+        <input type="text" nz-input placeholder="Search" nzSize="large">
+      </nz-input-group>
+    </nz-modal>
+  </li>
+  <li nz-menu-item routerLink="/" *ngFor="let social of socials">
+    <i nz-icon type="{{social}}" theme="fill"></i>
+  </li>
+</ul>
